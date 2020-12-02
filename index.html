@@ -5,28 +5,38 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.5.1.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Car insurance</title>
+  <title>Voting Is Important</title>
 </head>
 <body>
   <div class="container">
-    <h1>Car insurance</h1>
+    <h1>REGISTER TO VOTE</h1>
 
-    <p>To give you a quote, we need to know a little about you:</p>
+    <p>To register to vote in Oregon, you must meet certain requirements:</p>
 
-    <form id="insurance">
+    <form id="voting">
+      <label for="citizen">Citizen</label>
+      <select id="citizen">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select><br>
+      <label for="resident">Resident</label>
+      <select id="resident">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select><br>
       <label for="age">Age</label>
       <input id="age" type="text">
-      <label for="gender">Gender</label>
-      <select id="gender">
-        <option value="female">Female</option>
-        <option value="male">Male</option>
-      </select>
 
-      <button type="submit" class="btn">Calculate my quote</button>
+      <button type="submit" class="btn">Register to vote!</button>
     </form>
 
-    <div id="quote">
-      <p>You will have to pay $<span id="rate"></span> per month to get car insurance. You should probably just bike or take the bus.</p>
+    <div id="valid">
+      <p>Please continue to the <a href="https://secure.sos.state.or.us/orestar/vr/register.do?lang=eng&source=SOS">Oregon Voting Registration page to complete your registration.</a></p>
+    </div>
+    <div id="invalid">
+      <p>Unfortunately, you are not eligible to vote in Oregon.<br>
+      Please check the link below for eligibility requirements:<br>
+    <a href="https://sos.oregon.gov/voting/Pages/registration.aspx?lang=en">Oregon Voting Requirements</a></p>
     </div>
   </div>
 </body>

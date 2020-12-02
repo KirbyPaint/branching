@@ -1,16 +1,18 @@
 $(document).ready(function() {
-  $("form#insurance").submit(function(event) {
+  $("form#voting").submit(function(event) {
     const age = parseInt($("input#age").val());
-    const gender = $("select#gender").val();
+    const citizen = $("select#citizen").val();
+    const resident = $("select#resident").val();
 
     if (age) {
-      let quote = (100 - age) * 3;
-      if (gender === 'male' && age < 26) {
-        quote += 50;
+      if (citizen === "true" && resident === "true" && age >= 16) {
+        $('#invalid').hide();
+        $('#valid').show();
       }
-
-      $("#rate").text(quote);
-      $("#quote").show();
+      else {
+        $('#valid').hide();
+        $('#invalid').show();
+      }
     } else {
       alert('Please enter your age.');
     }
